@@ -11,7 +11,7 @@ namespace HolidayCounter
             {
                 days = 365 + days; 
             }
-            return (int)days;
+            return (int)days + 1;
         }
 
         static void Main(string[] args)
@@ -22,6 +22,7 @@ namespace HolidayCounter
 
             DateTime newYears = new DateTime(y, 1, 1);
             DateTime vDay = new DateTime(y, 2, 14);
+            DateTime julyInd = new DateTime(y, 7, 4);
             DateTime halloween = new DateTime(y, 10, 31);
             DateTime xMas = new DateTime(y, 12, 25);
 
@@ -29,6 +30,7 @@ namespace HolidayCounter
 
             Console.WriteLine(DaysUntil(now, newYears) + " days until New Years");
             Console.WriteLine(DaysUntil(now, vDay) + " days until Valentines Day");
+            Console.WriteLine(DaysUntil(now, julyInd) + " days until Fourth of July");
             Console.WriteLine(DaysUntil(now, halloween) + " days until Halloween");
             Console.WriteLine(DaysUntil(now, xMas) + " days until Christmas");
         }
